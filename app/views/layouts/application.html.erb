@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="ROBOTS" content="NOODP" />
   <meta name="viewport" content="initial-scale=1" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <%#
     Configure default and controller-, and view-specific titles in
     config/locales/en.yml. For more see:
@@ -14,8 +15,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= body_class %>">
+<row class="col-md-12">
   <%= render "flashes" -%>
   <%= yield %>
   <%= render "javascript" %>
+</row>
 </body>
 </html>

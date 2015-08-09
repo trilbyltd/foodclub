@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @suggestion.name %>
+</p>
+
+<p>
+  <strong>Votes:</strong>
+  <%= @suggestion.votes.count %>
+</p>
+
+<p>
+  <strong>Foursquare:</strong>
+  <%= @suggestion.foursquare_id %>
+</p>
+
+<p>
+  <strong>Suggeste by:</strong>
+  <%= @suggestion.user_id %>
+</p>
+
+<p>
+  <strong>Visited:</strong>
+  <%= @suggestion.visited %>
+</p>
+
+<%= link_to 'Edit', edit_suggestion_path(@suggestion) %> |
+<%= link_to 'Back', suggestions_path %>

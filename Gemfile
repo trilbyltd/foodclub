@@ -26,6 +26,8 @@ gem "simple_form"
 gem "title"
 gem "uglifier"
 
+gem 'font-awesome-rails', github: "bokmann/font-awesome-rails"
+
 group :development do
   gem "spring"
   gem "spring-commands-rspec"

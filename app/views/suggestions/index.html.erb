@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Foodclub Suggestions</h1>
+<%= link_to 'New Suggestion', new_suggestion_path %>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Votes</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @suggestions.each do |suggestion| %>
+      <tr>
+        <td><%= button_to '↑', upvote_suggestion_path(suggestion) %><%= suggestion.name %></td>
+        <td><%= suggestion.votes.count %></td>
+        <td><%= link_to 'Destroy', suggestion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
